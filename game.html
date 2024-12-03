@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Conga Game</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <audio id="music" loop>
+            <source src="images/music (2).mp3" type="audio/mpeg">
+        </audio>
+        <div class ="wrapper">
+            <div class="scores">
+                <span class="score">Score: 0</span>
+                <span class="high-score">High Score: 15</span>
+            </div>
+            <div class="background"></div>
+            <canvas id="myCanvas" width="512" height="512" 
+        style="margin-top: 10px; border:1px solid #000000;">
+         </canvas>
+         <div id = "gameMenu" class="gameOverMenu"  style="display: none;">
+            <span class="loseMessage">You Lose!</span>
+            <a href="game.html"><button id="gameStart">Restart</button></a>
+            <a href="menu.html"><button id="backtoMenu" style="font-size: 30;">Back to Menu</button></a>
+         </div>
+        
+        </div>
+        
+
+        <script src="script.js" defer></script>
+    </body>
+</html>

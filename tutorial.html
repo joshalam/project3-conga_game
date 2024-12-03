@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Conga Game Tutorial</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            img{
+                width:64px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h1 id="title" style ="font-size: 50px; margin-left: 100px;">How to play</h1>
+
+            <div class="characters">
+                <div class = "playerTutorial">
+                    <img id = "player" src="images\Player (3).png">
+                    <p>This is the player character</p>
+                </div>
+                <div class = "npcTutorial">
+                    <img id="npc" src = "images\Player (5).png">
+                    <p>This is your fellow dancer</p>
+                </div>
+            </div>
+
+            <span class="explanation">Collect dancers to grow your conga line and add to your score. 
+                Avoid crashing into the wall or your conga line or you lose.</span>
+            
+                <a href="menu.html"><button style="margin-top: 30px; margin-left: 105;">Return</button></a>
+        </div>
+        <script>
+            var animation = 0;
+            function animate() {
+                
+                var player = document.getElementById("player")
+                var npc = document.getElementById("npc")
+                if (animation == 0) {
+                    animation = 1;
+                    player.src ="images/Player (4).png";
+                    npc.src = "images/Player (7).png"
+
+                } else if (animation == 1) {
+                    animation = 0;
+                    player.src ="images/Player (3).png";
+                    npc.src = "images/Player (5).png"
+                }
+                console.log(animation);
+            }
+            
+            setInterval(animate,500);
+
+        </script>
+    </body>
+</html>
